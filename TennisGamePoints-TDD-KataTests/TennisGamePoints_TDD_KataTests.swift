@@ -25,12 +25,13 @@ class TennisGamePoints_TDD_KataTests: XCTestCase {
     func test15_40() {
         // Arrange
         let score = "15-40"
+        let expect = 4
         
         // Act
         let ret = vc.tennisGamePoints(score)
         
         // Assert
-        XCTAssertEqual(4, ret)
+        XCTAssertEqual(expect, ret)
     }
     
     func testExample() {
