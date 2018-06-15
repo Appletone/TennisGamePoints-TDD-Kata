@@ -10,5 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    func tennisGamePoints(_ score:String) -> Int {
+        return 0
+    }
 }
 

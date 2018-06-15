@@ -10,6 +10,7 @@ import XCTest
 @testable import TennisGamePoints_TDD_Kata
 
 class TennisGamePoints_TDD_KataTests: XCTestCase {
+    let vc = ViewController()
     
     override func setUp() {
         super.setUp()
@@ -19,6 +20,17 @@ class TennisGamePoints_TDD_KataTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+    }
+    
+    func test15_40() {
+        // Arrange
+        let score = "15-40"
+        
+        // Act
+        let ret = vc.tennisGamePoints(score)
+        
+        // Assert
+        XCTAssertEqual(4, ret)
     }
     
     func testExample() {
