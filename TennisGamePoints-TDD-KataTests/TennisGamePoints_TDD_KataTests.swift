@@ -94,6 +94,18 @@ class TennisGamePoints_TDD_KataTests: XCTestCase {
         XCTAssertEqual(expect, ret)
     }
     
+    func test15_30() {
+        // Arrange
+        let score = "15-30"
+        let expect = 3
+        
+        // Act
+        let ret = vc.tennisGamePoints(score)
+        
+        // Assert
+        XCTAssertEqual(expect, ret)
+    }
+    
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
