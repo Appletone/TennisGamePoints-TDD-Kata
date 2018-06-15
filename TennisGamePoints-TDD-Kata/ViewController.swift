@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         "all" :   "2 *" ]
 
     func tennisGamePoints(_ score:String) -> Int {
-        let scores = score.split(separator: "-") // 30-all
+        let scores = score.split(separator: "-")
         var home = tennisScore[scores[0].description]!
         let away = tennisScore[scores[1].description]!
         home.removeLast()
