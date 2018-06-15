@@ -9,9 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    let tennisScore = ["love": 0, "15": 1, "30": 2, "40": 3]
 
     func tennisGamePoints(_ score:String) -> Int {
-        return 0
+        let scores = score.split(separator: "-")
+        let home = String(scores[0])
+        let away = String(scores[1])
+        
+        return tennisScore[home]! + tennisScore[away]!
     }
 }
+
 
