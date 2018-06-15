@@ -10,20 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
     let tennisScore = [
-        "love":   0,
-        "15"  :   1,
-        "30"  :   2,
-        "40"  :   3]
+        "love":   "0 +",
+        "15"  :   "1 +",
+        "30"  :   "2 +",
+        "40"  :   "3 +",
+        "all" :   "2 *" ]
 
     func tennisGamePoints(_ score:String) -> Int {
-        let scores = score.split(separator: "-")
-        let home = String(scores[0])
-        var away = String(scores[1])
-        if away == "all" {
-            away = home
-        }
-        
-        return tennisScore[home]! + tennisScore[away]!
+        let scores = score.split(separator: "-") // 30-all
+        var home = tennisScore[scores[0].description]!
+        let away = tennisScore[scores[1].description]!
+        home.removeLast()
+        let pd = NSExpression(format: away + home)
+        return pd.expressionValue(with: nil, context: nil) as! Int
     }
 }
 
